@@ -19,8 +19,8 @@ header {
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensures nav stays above other content */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds depth */
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
 nav {
@@ -44,37 +44,35 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    position: relative; /* Required for the underline animation */
+    position: relative; 
     padding: 5px 0;
-    transition: color 0.3s ease-in-out; /* Smooth color change */
+    transition: color 0.3s ease-in-out; 
 }
 
-/* The Interactivity: Sliding Underline Effect */
+
 nav ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0); /* Starts at zero width */
+    transform: scaleX(0); 
     height: 2px;
     bottom: 0;
     left: 0;
     background-color: orange;
     transform-origin: bottom right;
-    transition: transform 0.3s ease-out; /* Smooth sliding animation */
+    transition: transform 0.3s ease-out; 
 }
 
-/* Hover State */
+
 nav ul li a:hover {
     color: #3498db;
 }
 
 nav ul li a:hover::after {
-    transform: scaleX(1); /* Expands to full width on hover */
+    transform: scaleX(1); 
     transform-origin: bottom left;
 }
 
-/* Extra: Active Link Styling */
-/* This highlights the page you are currently on if you add the 'active' class in HTML */
 nav ul li a.active {
     color: #3498db;
 }
@@ -82,7 +80,6 @@ nav ul li a.active::after {
     transform: scaleX(1);
 }
 
-/* Main Content Area */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -102,7 +99,6 @@ main {
     margin-top: 20px;
     border: 5px solid #2c3e50;
 }
-/* Container for the semester section */
 .semester-container {
     margin-top: 30px;
     padding: 20px;
@@ -113,7 +109,6 @@ main {
     color: #2c3e50;
 }
 
-/* Layout for the boxes */
 .semester-grid {
     display: flex;
     justify-content: center;
@@ -121,7 +116,6 @@ main {
     flex-wrap: wrap; 
 }
 
-/* Styling the "Textboxes" (Hyperlinks) */
 .sem-box {
     display: inline-block;
     padding: 15px 25px;
@@ -136,14 +130,12 @@ main {
     text-align: center;
 }
 
-/* Hover effect for interactivity */
 .sem-box:hover {
     background-color: tomato;
     color: black;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -151,7 +143,6 @@ footer {
     color: #666;
 }
 
-/* Semester Grid Styling */
 .semester-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -193,20 +184,17 @@ About me
     object-fit: cover;
 }
 
-/* Main large photo */
 .main-img {
     width: 180px;
     height: 180px;
 }
 
-/* Two smaller photos side-by-side */
 .extra-img {
     width: 120px;
     height: 120px;
     opacity: 0.8;
 }
 
-/* PHOTO EFFECTS: Floating and Zoom */
 .about-img:hover {
     transform: scale(1.15) rotate(2deg);
     opacity: 1;
@@ -215,7 +203,6 @@ About me
     border-color: #27391C;
 }
 
-/* Content Box Interactive Hover (Already in your file, but enhanced) */
 .content-box {
     background: Red;
     padding: 25px;
@@ -230,7 +217,6 @@ About me
     border-left-color: #3498db;
     background-color: #f9f9f9;
 }
-/* About Me Layout */
 .about-container {
     display: flex;
     max-width: 1100px;
@@ -240,7 +226,6 @@ About me
     align-items: flex-start;
 }
 
-/* Profile Card (Left Column) */
 .profile-card {
     flex: 1;
     background: #8BAE66;
@@ -249,7 +234,7 @@ About me
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    position: sticky; /* Keeps it visible as you scroll */
+    position: sticky;
     top: 100px;
     transition: transform 0.3s ease;
 }
@@ -271,8 +256,6 @@ About me
 .profile-img:hover {
     transform: rotate(5deg) scale(1.1);
 }
-
-/* Content Boxes (Right Column) */
 .about-content {
     flex: 2;
 }
@@ -287,7 +270,6 @@ About me
     transition: all 0.3s ease;
 }
 
-/* INTERACTIVE: Boxes lift and glow on hover */
 .content-box:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
@@ -306,7 +288,6 @@ About me
 
 .hobby-list li:last-child { border: none; }
 
-/* Responsive Design */
 @media screen and (max-width: 850px) {
     .about-container {
         flex-direction: column;
@@ -317,7 +298,6 @@ About me
     }
 }
 
-/* Base Theme Variables */
 :root {
     --bg-color: #f4f7f6;
     --text-color: #333;
@@ -325,7 +305,6 @@ About me
     --accent-color: #3498db;
 }
 
-/* Dark Theme Variables */
 .dark-theme {
     --bg-color: #1a1a1a;
     --text-color: #f4f7f6;
@@ -355,7 +334,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Interactive Buttons */
 .theme-btn, .fact-btn {
     padding: 10px 20px;
     border-radius: 20px;
@@ -400,7 +378,6 @@ Education
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Education Table Base Styles (Consolidated) */
 .education-table {
     width: 100%;
     border-collapse: collapse;
@@ -423,7 +400,6 @@ Education
     font-size: 0.9rem;
 }
 
-/* Row Interaction Styles */
 .education-table tr {
     cursor: pointer;
     transition: background-color 0.3s;
@@ -433,13 +409,11 @@ Education
     background-color: #f1f1f1;
 }
 
-/* JavaScript Active State: When a user clicks a row */
 .active-row {
     background-color: #A8BBA3 !important;
     border-left: 5px solid #2c3e50;
 }
 
-/* Campus Image Interaction */
 .edu-img {
     width: 180px;
     height: 120px;
@@ -453,10 +427,9 @@ Education
 
 .edu-img:hover {
     transform: scale(1.1);
-    border-color: #2c3e50; /* Changed from 'Red' to match your theme better */
+    border-color: #2c3e50;
 }
 
-/* Responsive Table */
 @media screen and (max-width: 600px) {
     .edu-img {
         width: 120px;
@@ -494,7 +467,6 @@ Skills
     color: #2c3e50;
 }
 
-/* The Bar Container */
 .progress-bar {
     background: #e0e0e0;
     border-radius: 20px;
@@ -502,7 +474,6 @@ Skills
     height: 25px;
 }
 
-/* The Animated Part */
 .progress {
     background: linear-gradient(90deg, #3498db, #2c3e50);
     height: 100%;
@@ -511,15 +482,14 @@ Skills
     padding-right: 15px;
     line-height: 25px;
     font-size: 12px;
-    width: 0%; /* Start at 0 for animation */
-    transition: width 1.5s ease-in-out; /* This creates the "rising" effect */
+    width: 0%; 
+    transition: width 1.5s ease-in-out; 
 }
 
 .soft-skill .progress {
     background: linear-gradient(90deg, #27ae60, #2c3e50);
 }
 
-/* Reset Button Style */
 .controls {
     margin-top: 30px;
     text-align: center;
@@ -556,11 +526,10 @@ Experiences
     margin-top: 40px;
 }
 
-/* Individual Card Styling */
 .exp-card {
     display: flex;
     background: #fff;
-    border-left: 5px solid #2c3e50; /* Left border accent */
+    border-left: 5px solid #2c3e50; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -568,20 +537,17 @@ Experiences
     text-align: left;
 }
 
-/* INTERACTIVE: Scale and Shadow on Hover */
 .exp-card:hover {
-    transform: translateX(10px); /* Slides slightly to the right */
+    transform: translateX(10px); 
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    border-left-color: #27391C; /* Changes accent color on hover */
+    border-left-color: #27391C; 
 }
 
-/* Distinction for Tech Cards */
 .exp-card.tech {
     background: #fdfdfd;
     border-left-style: dashed;
 }
 
-/* Card Content Layout */
 .exp-date {
     background: #4E9F3D;
     color: #fff;
@@ -615,7 +581,6 @@ Experiences
     font-size: 0.95rem;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
     .exp-card {
         flex-direction: column;
@@ -625,14 +590,13 @@ Experiences
     }
 }
 
-Famili
-/* Family Section Layout */
+Family
 .main-photo-container {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.Famili-img {
+.Family-img {
     max-width: 80%;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -648,7 +612,6 @@ Famili
     margin: 0 auto;
 }
 
-/* Card Styling */
 .family-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -667,13 +630,11 @@ Famili
     border-color: #043915;
 }
 
-/* Specific highlight for 'Me' card */
 .highlight-me {
     background-color: #f0f9f1;
     border: 2px solid #4E9F3D;
 }
 
-/* Love Button Style */
 .love-btn {
     margin-top: 15px;
     background-color: #043915;
@@ -687,7 +648,7 @@ Famili
 }
 
 .love-btn:hover {
-    background-color: #c0392b; /* Turns reddish on hover */
+    background-color: #c0392b; 
     transform: scale(1.05);
 }
 
@@ -696,7 +657,6 @@ Famili
     margin-left: 5px;
 }
 
-/* Image styling remains similar to yours */
 .family-img {
     width: 140px;
     height: 140px;
@@ -728,11 +688,11 @@ Contact
 }
 
 .contact-form {
-    flex: 2; /* Form takes up more space */
+    flex: 2; 
 }
 
 .contact-info {
-    flex: 1; /* Info column is narrower */
+    flex: 1; 
     background: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
@@ -772,7 +732,6 @@ Contact
     background: #3498db;
 }
 
-/* Social Buttons */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -797,14 +756,12 @@ Contact
     opacity: 0.8;
 }
 
-/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .contact-wrapper {
         flex-direction: column;
     }
 }
 
-/* QR Code Container Styling */
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -820,10 +777,9 @@ Contact
     gap: 10px;
 }
 
-/* Appropriate Size for QR Codes */
 .qr-code {
-    width: 150px;           /* Standard professional size */
-    height: 150px;          /* Keep it square */
+    width: 150px;           
+    height: 150px;          
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -832,9 +788,8 @@ Contact
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect for QR Codes */
 .qr-code:hover {
-    transform: scale(1.1);   /* Slight zoom to encourage scanning */
+    transform: scale(1.1);   
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     border-color: #3498db;
     cursor: pointer;
@@ -846,14 +801,13 @@ Contact
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: bold;
-    width: 150px;           /* Match width of QR code for alignment */
+    width: 150px;           
     text-align: center;
 }
 
 .ig { background-color: #e1306c; }
 .li { background-color: #0077b5; }
 
-/* Popup Styles */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -862,7 +816,7 @@ Contact
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
-    display: none; /* Hidden until JS triggers it */
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 9999;
